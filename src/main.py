@@ -1,5 +1,7 @@
+from map import Map
+
 def main():
-    pass
+    map = Map()
 
 if __name__=="__main__":
     main()
