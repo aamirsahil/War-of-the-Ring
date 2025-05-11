@@ -1,7 +1,9 @@
-from map import Map
+from game import Game
 
 def main():
-    map = Map()
+    game = Game()
+    game.run()
+    print("Done, Thanks for playing")
 
 if __name__=="__main__":
     main()
