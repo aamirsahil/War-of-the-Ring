@@ -1,5 +1,5 @@
 from war_of_the_ring import config
-from war_of_the_ring.game_manager import Game
+from core.game_manager import Game
 
 def main():
     game = Game(
