@@ -1,7 +1,10 @@
-from game import Game
+from core.game import Game
+import config
 
 def main():
-    game = Game()
+    game = Game(
+        config = config.game_config
+        )
     game.run()
     print("Done, Thanks for playing")
 
