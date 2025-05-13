@@ -1,6 +1,7 @@
 assets/
 notebook/region_labels.npz
 doc/
+**/tempCodeRunnerFile.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
