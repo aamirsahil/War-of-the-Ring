@@ -1,10 +1,7 @@
-from war_of_the_ring import config
-from core.game_manager import Game
+from war_of_the_ring import game_config, create_game
 
 def main():
-    game = Game(
-        config = config.game_config
-        )
+    game = create_game()
     game.run()
     print("Done, Thanks for playing")
 
