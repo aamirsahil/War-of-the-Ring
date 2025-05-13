@@ -1,1 +1,1 @@
-from .game_manager import Game
+from .game_manager import GameManager
