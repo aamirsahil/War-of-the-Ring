@@ -1,0 +1,1 @@
+from .config import manager_config, game_config
