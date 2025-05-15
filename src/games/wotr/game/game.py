@@ -1,11 +1,11 @@
 from typing import Optional
-import pygame
 
 # interface modules
-from interface_api import IGame, IEventTypes, IDisplay, IDrawGraphics
+from interface_api.game import IGame, IDrawGraphics
+from interface_api.core import IDisplay, IEventTypes
 
 # game modules
-from games.wotr.model import Scene, GameConfig
+from games.wotr.model import GameConfig
 from games.wotr.map import Map
 from games.wotr.input_manager import InputManager
 

@@ -4,7 +4,8 @@ from core.model import ManagerConfig
 from core.display import Display
 from core.inputs import EventTranslator
 
-from interface_api import IManager, IGame
+from interface_api.core import IManager
+from interface_api.game import IGame
 
 class Manager(IManager):
     def __init__(self, config : ManagerConfig, game : IGame):

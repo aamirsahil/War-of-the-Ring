@@ -3,7 +3,8 @@ from typing import Dict
 
 from core.model import DisplayConfig, DrawSurface
 
-from interface_api import IDisplay, IDrawGraphics
+from interface_api.core import IDisplay
+from interface_api.game import IDrawGraphics
 
 class Display(IDisplay):
     """
