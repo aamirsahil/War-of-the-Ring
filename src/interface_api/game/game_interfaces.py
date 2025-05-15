@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from typing import Optional, Tuple
 from dataclasses import dataclass
 
-from .core_interfaces import IEventTypes, IDisplay
+from core.core_interfaces import IDisplay, IEventTypes
 
 class IGame(ABC):
     @abstractmethod
