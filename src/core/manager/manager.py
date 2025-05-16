@@ -4,8 +4,7 @@ from core.model import ManagerConfig
 from core.display import Display
 from core.inputs import EventTranslator
 
-from interface_api.core import IManager
-from interface_api.game import IGame
+from interface_api import IManager, IGame
 
 class Manager(IManager):
     def __init__(self, config : ManagerConfig, game : IGame):
@@ -21,7 +20,9 @@ class Manager(IManager):
         # main loop
         pygame.init()
         pygame.display.set_caption(self.title)
-        self.game.start()
+        self.game.start(
+            display = self.display
+        )
 
         while self.running:
             # event management

@@ -1,6 +1,6 @@
 from typing import Optional
 
-from interface_api.core import IEventTypes
+from interface_api import IEventTypes
 
 class InputManager:
     def __init__(self):

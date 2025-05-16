@@ -1,7 +1,7 @@
 import pygame
 from typing import Optional
 
-from interface_api.core import IEventTypes
+from interface_api import IEventTypes
 
 class EventTranslator:
     def __init__(self):
