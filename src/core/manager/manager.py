@@ -30,6 +30,7 @@ class Manager(IManager):
             for event in events:
                 if event.type == pygame.QUIT:
                     self.running = False
+                    break
                 event_type = self.event_translator.translate(event = event)
                 self.game.update(event = event_type)
 
