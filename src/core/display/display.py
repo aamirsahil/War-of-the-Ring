@@ -3,8 +3,7 @@ from typing import Dict
 
 from core.model import DisplayConfig, DrawSurface
 
-from interface_api.core import IDisplay
-from interface_api.game import IDrawGraphics
+from interface_api import IDisplay, IDrawGraphics
 
 class Display(IDisplay):
     """
@@ -29,22 +28,22 @@ class Display(IDisplay):
         self.screen = pygame.display.set_mode((self.width, self.height), flag, config.screen_depth)
         self.surfaces : Dict[str , DrawSurface] = {}
 
-    def load(self, surface : IDrawGraphics):
+    def load(self, surface_data : IDrawGraphics):
         """
         Add surface data to self.sufaces
         Parameters:
             surface (IDrawGraphics) : surface data sent by game module
         """
-        surface = pygame.image.load(surface.asset_loc)
-        offset = surface.pos_offset
-        view_rect = pygame.Rect(*surface.view_area)
+        surface = pygame.image.load(surface_data.asset_loc)
+        offset = surface_data.pos_offset
+        view_rect = pygame.Rect(*surface_data.view_area)
         
         draw_surface = DrawSurface(
             surface = surface,
             pos_offset = offset,
             view_rect = view_rect
         )
-        self.surfaces[surface.id] = draw_surface
+        self.surfaces[surface_data.id] = draw_surface
     
     def unload(self, id : str):
         """
