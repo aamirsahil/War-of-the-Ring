@@ -9,6 +9,11 @@ class IDrawGraphics:
     pos_offset : Tuple[int, int]
     view_area : Tuple[int, int, int, int]
 
+@dataclass
+class IGameImage:
+    asset_loc : str
+    opacity : int
+
 class IEventTypes(Enum):
     Quit = auto()
     Select = auto()
