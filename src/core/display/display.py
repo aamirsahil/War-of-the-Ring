@@ -54,6 +54,9 @@ class Display(IDisplay):
         if id in self.surfaces:
             del self.surfaces[id]
 
+    def update_surface(self, id : str, surface_data):
+        pass
+
     def draw(self, id : str):
         """
         Draw the surface[id] on self.screen
